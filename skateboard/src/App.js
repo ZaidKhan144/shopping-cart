@@ -1,9 +1,16 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './components/Home'
+import NavBar from './components/Nav/Nav'
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1>Remove the boilerplate code</h1>
-    </div>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route exact path="/"> <Home /> </Route>
+      </Switch>
+    </Router>
+    
   );
 }
 
