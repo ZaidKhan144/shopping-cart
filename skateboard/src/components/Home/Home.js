@@ -1,14 +1,21 @@
 import skateboardVideo from './s3.mp4'
-import Video from './HomeStyles.js'
+import { Video, Overlay, HomeHeading } from './HomeStyles.js'
+
 
 const Home = () => {
     return(
+        
         <div>
-            <h1>Remove the boilerplate code</h1>
-            <Video playsInline autoPlay muted loop> 
-                <source src={skateboardVideo} type="video/mp4"></source>
-                    "Your browser does not support the video tag."
-            </Video>
+           <Overlay>
+                <Video playsInline autoPlay muted loop> 
+                        <source src={skateboardVideo} type="video/mp4"></source>
+                            "Your browser does not support the video tag."
+                </Video>
+           </Overlay>
+            
+            <HomeHeading>
+                <h1>Glide on your own four wheels</h1>
+            </HomeHeading>
             
         </div>
     )

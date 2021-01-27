@@ -21,7 +21,6 @@ export const Nav = styled.nav`
         & li a {
             color: #ffffff;
             text-decoration: none;
-            
             font-size: 1.4em;
             font-family: 'Roboto', sans-serif;
 
