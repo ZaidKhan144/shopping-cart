@@ -1,6 +1,6 @@
 // import { Nav, Title } from '../Nav/NavStyles'
 // import NavBar from '../Nav/Nav'
-import { ShopPageTitle, ImgDiv } from './ShopStyles'
+import { ShopPageTitle, ImgDiv, ShopPageContainer } from './ShopStyles'
 import Catalog from '../../data'
 import { Link } from "react-router-dom"
 
@@ -11,7 +11,7 @@ const Shop = () => {
         <div>
             <ShopPageTitle>Complete Skateboards</ShopPageTitle>
             
-            <div>
+            <ShopPageContainer>
                 {skates.map((skate) => {
                     return (
                         <Link key={skate.id} to={`shop/${skate.id}`}>
@@ -25,7 +25,7 @@ const Shop = () => {
                         </Link>
                     )
                 })}
-            </div>
+            </ShopPageContainer>
             
         </div>
     )
