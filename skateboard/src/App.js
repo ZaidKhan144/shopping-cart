@@ -3,6 +3,7 @@ import Home from './components/Home/Home'
 import NavBar from './components/Nav/Nav'
 import Shop from './components/Shop/Shop'
 
+
 const App = () => {
   return (
     <Router>

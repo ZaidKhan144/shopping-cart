@@ -1,16 +1,32 @@
-import { Nav, Title } from '../Nav/NavStyles'
-
-import ShopNav from './ShopStyles'
-
+// import { Nav, Title } from '../Nav/NavStyles'
+// import NavBar from '../Nav/Nav'
+import { ShopPageTitle, ImgDiv } from './ShopStyles'
+import Catalog from '../../data'
+import { Link } from "react-router-dom"
 
 const Shop = () => {
+    const skates = Catalog
+    
     return(
         <div>
-
-       <ShopNav></ShopNav>
+            <ShopPageTitle>Complete Skateboards</ShopPageTitle>
             
+            <div>
+                {skates.map((skate) => {
+                    return (
+                        <Link key={skate.id} to={`shop/${skate.id}`}>
+                            <ImgDiv style={{
+                                backgroundImage: `url(${skate.img})`
+                            }}>
 
-            <h1>Over here my shop design will come</h1>
+                            </ImgDiv>
+                        <h1>{skate.name}</h1>
+                        <p>$ {skate.price}</p>
+                        </Link>
+                    )
+                })}
+            </div>
+            
         </div>
     )
 }

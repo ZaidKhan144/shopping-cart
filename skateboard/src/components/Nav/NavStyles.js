@@ -1,9 +1,19 @@
 import styled, { css } from 'styled-components'
 
+// const backtrans = (props) => 
+//     props?.bct ? css({ backgroundColor: props.bct}) : undefined;
+
+// const backblack = (props) => 
+//     props?.bcb ? css({ backgroundColor: props.bcb }) : undefined;
+
+
+
+
 export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
-    /* background-color: #323232; */
+    /* background-color: ${props => props.back ? "transparent" : "#323232"}; */
+    background-color: #323232;
     align-items: center;
     padding-right: 10%;
     padding-left: 10%;
@@ -16,7 +26,7 @@ export const Nav = styled.nav`
         & li {
             padding-left: 30px;
         }
-
+        
 
         & li a {
             color: #ffffff;

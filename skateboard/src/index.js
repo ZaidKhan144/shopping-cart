@@ -15,3 +15,23 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
+// import picture1 from './images/picture1.jpg'
+
+
+// const Catalog = [
+//     {
+//         "id": 0,
+//         "name": "SK1",
+//         "price": 20.10,
+//         "img": picture1
+//     },
+//     {
+//         "id": 1,
+//         "name": "SK2",
+//         "price": 80.50,
+//         "img": "./images/picture2"
+//     }
+// ]
+// export default Catalog
+
+// import picture1 from './images/picture1.jpg'

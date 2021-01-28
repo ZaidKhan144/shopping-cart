@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import { Nav, Title } from './NavStyles'
+import { Nav, Title } from './NavStyles' 
 
 const NavBar = () => {
     return(
-        <Nav>
+        <Nav back>
             
             <Title>
                 <Link to="/">Skateboarders</Link>
