@@ -24,7 +24,7 @@ export const ImgDiv = styled.div`
 `
 
 export const ShopPageContainer = styled.div`
-    /* background-color: #5a1a1a; */
+    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 70%;
@@ -54,5 +54,3 @@ export const ShopPageContainer = styled.div`
         }
     }
 `
-
-// export default ShopNav
