@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import  { Nav } from '../Nav/NavStyles'
+// import  { Nav } from '../Nav/NavStyles'
 
 // export const ShopNav = styled(Nav)`
 //     background-color: #323232;

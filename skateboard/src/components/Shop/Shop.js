@@ -1,14 +1,15 @@
 // import { Nav, Title } from '../Nav/NavStyles'
 // import NavBar from '../Nav/Nav'
 import { ShopPageTitle, ImgDiv, ShopPageContainer } from './ShopStyles'
-import Catalog from '../../data'
+import data from '../../data'
 import { Link } from "react-router-dom"
 
 const Shop = () => {
-    const skates = Catalog
+    const skates = data
     
     return(
         <div>
+           
             <ShopPageTitle>Complete Skateboards</ShopPageTitle>
             
             <ShopPageContainer>

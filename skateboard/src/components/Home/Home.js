@@ -1,5 +1,5 @@
 import skateboardVideo from './s3.mp4'
-import { Video, Overlay, HomeHeading } from './HomeStyles.js'
+import { Video, Overlay, HomeHeading } from './HomeStyles'
 
 
 const Home = () => {

@@ -10,12 +10,16 @@ const App = () => {
       <NavBar />
       <Switch>
         <Route exact path="/"> <Home /> </Route>
-        <Route exact path='/shop'> <Shop /> </Route>
-        <Route exact path='/shop/:id'> <ShopItem /> </Route>
-      </Switch>
+        <Route exact path="/shop"> <Shop /> </Route>
+        {/* In shopItem component, extracting ID and passing it in prop through shopItemId */}
+        <Route exact path="/shop/:id" render={(itemProp) => <ShopItem shopItemId={itemProp.match.params.id} />} />
+      </Switch> 
     </Router>
     
   );
 }
 
 export default App;
+
+
+// 
