@@ -27,17 +27,17 @@ const ShopItem = (shopItemId) => {
     return(
         <div>
         
-            <h1>My SHOP ITEM</h1>
-            
-
             <ShopItemContainer>
                 <ItemContainerOne>
-                    {/* <ItemImage></ItemImage> */}
+                    <ItemImage src={item.img} />
                 </ItemContainerOne>
 
                 <ItemContainerTwo>
                     <h2>{item.name}</h2>
-                    <p>{item.price}</p>
+                    <p>$ {item.price}</p>
+                    <button>Add to cart</button>
+                    <Link to="/checkout">Checkout</Link>
+                    <Link className="back" to="/shop">Back</Link>
                 </ItemContainerTwo>
             </ShopItemContainer>
         </div>
