@@ -3,17 +3,10 @@ import data from '../../data'
 import { Link } from "react-router-dom"
 
 
-const ShopItem = (shopItemId) => {
-
-    // this will return ID in an object
-    console.log(shopItemId)
-
-    // extracting the ID from 'shopItemId' object
-    const ItemId = shopItemId.shopItemId;
+const ShopItem = ({shopItemId, addItemInCart}) => {
 
     // ID is in string so here we are converting it in Integer
-    const IntId = parseInt(ItemId, 10)
-
+    const IntId = parseInt(shopItemId, 10)
     let item;
 
     for(let i = 0; i< data.length; i++){
@@ -24,6 +17,8 @@ const ShopItem = (shopItemId) => {
         }
      }
 
+    // on click set the quantity to 1 and pass the item
+     const handleClick = () => addItemInCart({ ...item, quantity: 1})
     return(
         <div>
         
@@ -35,7 +30,7 @@ const ShopItem = (shopItemId) => {
                 <ItemContainerTwo>
                     <h2>{item.name}</h2>
                     <p>$ {item.price}</p>
-                    <button>Add to cart</button>
+                    <button onClick={handleClick}>Add to cart</button>
                     <Link to="/checkout">Checkout</Link>
                     <Link className="back" to="/shop">Back</Link>
                 </ItemContainerTwo>

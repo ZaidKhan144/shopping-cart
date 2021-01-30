@@ -41,6 +41,7 @@ export const ItemContainerTwo = styled.div`
         border-radius: 4px;
         position: absolute;
         top: 30%;
+        cursor: pointer;
     }
     & a {
         text-decoration: none;
