@@ -1,9 +1,11 @@
 import { ShopItemContainer, ItemContainerOne, ItemImage, ItemContainerTwo} from './ShopItemStyles'
 import data from '../../data'
 import { Link } from "react-router-dom"
-
+import { useState } from 'react'
 
 const ShopItem = ({shopItemId, addItemInCart}) => {
+
+    const [showCheckoutBtn, setShowCheckoutBtn] = useState(false)
 
     // ID is in string so here we are converting it in Integer
     const IntId = parseInt(shopItemId, 10)
@@ -18,7 +20,12 @@ const ShopItem = ({shopItemId, addItemInCart}) => {
      }
 
     // on click set the quantity to 1 and pass the item
-     const handleClick = () => addItemInCart({ ...item, quantity: 1})
+    const handleClick = () => {
+        addItemInCart({ ...item, quantity: 1}) 
+        setShowCheckoutBtn(true)
+    }
+        
+     
     return(
         <div>
         
@@ -31,7 +38,7 @@ const ShopItem = ({shopItemId, addItemInCart}) => {
                     <h2>{item.name}</h2>
                     <p>$ {item.price}</p>
                     <button onClick={handleClick}>Add to cart</button>
-                    <Link to="/checkout">Checkout</Link>
+                    { showCheckoutBtn ? <Link to="/checkout">Checkout</Link> : null }
                     <Link className="back" to="/shop">Back</Link>
                 </ItemContainerTwo>
             </ShopItemContainer>
