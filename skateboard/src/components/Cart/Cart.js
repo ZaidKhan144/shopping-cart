@@ -1,4 +1,4 @@
-import { ParentCartContainer, CartContainer, Product, Price, QTY, Remove } from './CartStyles'
+import { ParentCartContainer, CartContainer, Product, Price, QTY, Remove, PlusSign, MinusSign } from './CartStyles'
  
 
 const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
@@ -18,7 +18,9 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                                 </Product>
 
                                 <QTY> 
-                                    <input type="number" value={item.quantity} />
+                                    <MinusSign />
+                                    <input type value={item.quantity} />
+                                    <PlusSign />
                                 </QTY>
                                 
                                 <Price>
@@ -26,7 +28,7 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                                 </Price>
 
                                 <Remove>
-                                   <button onClick={() => removeItem(item, "Whole")}>Remove</button>
+                                    <button onClick={() => removeItem(item, "Whole")}>Remove</button>
                                 </Remove>
                             </CartContainer>
                             )

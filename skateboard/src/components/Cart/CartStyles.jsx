@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-// import { PlusCircle }  from 'styled-icons/boxicons-regular'
+import { PlusCircle, MinusCircle }  from '@styled-icons/boxicons-regular'
+
 
 export const ParentCartContainer = styled.div`
     position: absolute;
@@ -47,9 +48,28 @@ export const Price = styled.div`
 export const QTY = styled.div`
         display: flex;
     & input {
-        margin: auto 0;
-        width: 50%;
+        margin: auto 5px;
+        width: 30%;
+        padding: 5px 0;
+        border: none;
+        border-radius: 2px;
+        text-align: center;
     }
+`
+
+export const PlusSign = styled(PlusCircle)`
+    margin: auto 0;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    
+`;
+
+export const MinusSign = styled(MinusCircle)`
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin: auto 0;
 `
 
 export const Remove = styled.div`
@@ -57,5 +77,7 @@ export const Remove = styled.div`
 
      & button {
          margin: auto 0;
+         cursor: pointer;
      }   
 `
+
