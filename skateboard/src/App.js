@@ -28,6 +28,19 @@ const App = () => {
     }
     console.log(shoppingCart)
   }
+
+  const removeItem = (item, removeWhole) => {
+    const itemIndex = shoppingCart.findIndex((i) => i.id === item.id)
+
+    if(itemIndex !== -1){
+      const newCart = [...shoppingCart]
+      // if removeWhole argument found then remove item from cart if not then decrease quantity
+      removeWhole ? newCart.splice(itemIndex, 1) : newCart[itemIndex].quantity--
+      // update cart
+      setShoppingCart([...newCart])
+    }
+    
+  }
   
   return (
     <Router>
@@ -37,7 +50,7 @@ const App = () => {
         <Route exact path="/shop"> <Shop /> </Route>
         {/* In shopItem component, extracting ID and passing it in prop through shopItemId */}
         <Route exact path="/shop/:id" render={(itemProp) => <ShopItem shopItemId={itemProp.match.params.id} addItemInCart={addItemInCart} />} />
-        <Route exact path="/cart"> <Cart addItemInCart={addItemInCart} shoppingCart={shoppingCart} /> </Route> 
+        <Route exact path="/cart"> <Cart addItemInCart={addItemInCart} shoppingCart={shoppingCart} removeItem={removeItem} /> </Route> 
       </Switch> 
     </Router>
     

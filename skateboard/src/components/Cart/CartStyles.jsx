@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+// import { PlusCircle }  from 'styled-icons/boxicons-regular'
 
 export const ParentCartContainer = styled.div`
     position: absolute;
@@ -6,6 +7,12 @@ export const ParentCartContainer = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
+
+    & div {
+        & h1{
+            text-align: center;
+        }
+    }
 `
 
 export const CartContainer = styled.div`
@@ -48,7 +55,7 @@ export const QTY = styled.div`
 export const Remove = styled.div`
         display: flex;
 
-     & p {
+     & button {
          margin: auto 0;
      }   
 `
