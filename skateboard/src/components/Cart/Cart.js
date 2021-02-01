@@ -18,9 +18,9 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                                 </Product>
 
                                 <QTY> 
-                                    <MinusSign />
-                                    <input type value={item.quantity} />
-                                    <PlusSign />
+                                    <MinusSign onClick={() => item.quantity > 1 && removeItem(item)} />
+                                    <p>{item.quantity}</p>
+                                    <PlusSign onClick={() => addItemInCart(item)} />
                                 </QTY>
                                 
                                 <Price>
@@ -31,9 +31,13 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                                     <button onClick={() => removeItem(item, "Whole")}>Remove</button>
                                 </Remove>
                             </CartContainer>
+
                             )
                          })
                     }
+                    <p>Total Price: {shoppingCart.reduce((total, item) => {
+                        return total + item.price * item.quantity
+                    }, 0).toFixed(2)}</p>
             </div>
             :  <h1>Your Cart is Empty</h1>
         }

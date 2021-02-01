@@ -42,18 +42,18 @@ export const Price = styled.div`
         display: flex;
     & p {
         margin: auto 0;
+        font-size: 1.2em;
     }
 `
 
 export const QTY = styled.div`
         display: flex;
-    & input {
+    & p {
         margin: auto 5px;
         width: 30%;
         padding: 5px 0;
-        border: none;
-        border-radius: 2px;
         text-align: center;
+        font-size: 1.2em;
     }
 `
 

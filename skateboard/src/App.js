@@ -21,6 +21,8 @@ const App = () => {
       const newCart = [...shoppingCart];
       // increasing the quantity of an index that we have our item on
       newCart[itemIndex].quantity++
+      // update cart
+      setShoppingCart(newCart)
     } else {
       // Adding the item but not increasing the quantity, it's already handled at onClick.
       setShoppingCart([...shoppingCart, item])
@@ -37,7 +39,7 @@ const App = () => {
       // if removeWhole argument found then remove item from cart if not then decrease quantity
       removeWhole ? newCart.splice(itemIndex, 1) : newCart[itemIndex].quantity--
       // update cart
-      setShoppingCart([...newCart])
+      setShoppingCart(newCart)
     }
     
   }
