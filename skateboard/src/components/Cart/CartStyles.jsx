@@ -13,6 +13,18 @@ export const ParentCartContainer = styled.div`
         & h1{
             text-align: center;
         }
+        & .bottomCart {
+            background-color: yellow;
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+
+            & a {
+                text-decoration: none;
+            }
+        }
     }
 `
 

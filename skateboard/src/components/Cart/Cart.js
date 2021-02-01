@@ -1,5 +1,5 @@
 import { ParentCartContainer, CartContainer, Product, Price, QTY, Remove, PlusSign, MinusSign } from './CartStyles'
- 
+import { Link } from "react-router-dom" 
 
 const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
 
@@ -35,11 +35,22 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                             )
                          })
                     }
-                    <p>Total Price: {shoppingCart.reduce((total, item) => {
-                        return total + item.price * item.quantity
-                    }, 0).toFixed(2)}</p>
+                    <div className="bottomCart">
+                        <p>Total Price: {shoppingCart.reduce((total, item) => {
+                            return total + item.price * item.quantity
+                        }, 0).toFixed(2)}</p>
+                        <Link to="/complete">Pay</Link>
+                        <Link to="/shop">Back</Link>
+                    </div>
+                    
             </div>
-            :  <h1>Your Cart is Empty</h1>
+                
+             : 
+            <div className="emptyCart">
+                <h1>Your Cart is Empty</h1>
+                <Link to="/shop">Go Back</Link>
+            </div>
+             
         }
         </ParentCartContainer>
     )

@@ -4,6 +4,7 @@ import NavBar from './components/Nav/Nav'
 import Shop from './components/Shop/Shop'
 import ShopItem from './components/ShopItem/ShopItem'
 import Cart from './components/Cart/Cart'
+import Complete from './components/Complete/Complete'
 import { useState } from 'react'
 
 const App = () => {
@@ -53,6 +54,7 @@ const App = () => {
         {/* In shopItem component, extracting ID and passing it in prop through shopItemId */}
         <Route exact path="/shop/:id" render={(itemProp) => <ShopItem shopItemId={itemProp.match.params.id} addItemInCart={addItemInCart} />} />
         <Route exact path="/cart"> <Cart addItemInCart={addItemInCart} shoppingCart={shoppingCart} removeItem={removeItem} /> </Route> 
+        <Route exact path="/complete"> <Complete /> </Route>
       </Switch> 
     </Router>
     
