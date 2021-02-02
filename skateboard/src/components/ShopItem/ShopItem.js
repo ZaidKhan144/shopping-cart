@@ -36,10 +36,13 @@ const ShopItem = ({shopItemId, addItemInCart}) => {
 
                 <ItemContainerTwo>
                     <h2>{item.name}</h2>
-                    <p>$ {item.price}</p>
+                    <p>${item.price}</p>
                     <button onClick={handleClick}>Add to cart</button>
-                    { showCheckoutBtn ? <Link to="/cart">Checkout</Link> : null }
-                    <Link className="back" to="/shop">Back</Link>
+                    { showCheckoutBtn ? <Link className="checkout" to="/cart">Checkout</Link> : null }
+                    
+                        <Link className="back" to="/shop">Back</Link>
+                    
+                    
                 </ItemContainerTwo>
             </ShopItemContainer>
         </div>

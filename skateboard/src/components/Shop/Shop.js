@@ -22,7 +22,7 @@ const Shop = () => {
 
                             </ImgDiv>
                         <h1>{skate.name}</h1>
-                        <p>$ {skate.price}</p>
+                        <p>${skate.price}</p>
                         </Link>
                     )
                 })}

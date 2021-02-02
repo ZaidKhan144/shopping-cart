@@ -8,7 +8,7 @@ export const ParentCartContainer = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
-
+    
     & div {
         & h1{
             text-align: center;
@@ -33,7 +33,8 @@ export const CartContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 50%;
     margin: 0 auto;
-    background-color: orange;
+    
+    /* background-color: orange; */
     padding: 20px;
     
 `
