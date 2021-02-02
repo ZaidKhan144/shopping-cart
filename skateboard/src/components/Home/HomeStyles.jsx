@@ -7,6 +7,8 @@ export const Overlay = styled.div`
     height: 100%;
     top: 0;
     z-index: -3;
+    display: grid;
+    grid-template-columns: 500px 1fr 550px;
 
     & video {
         object-fit: cover;
@@ -20,10 +22,17 @@ export const Overlay = styled.div`
         max-width: 100%;
         display: block;
     }
-    & h1{
+
+    & img {
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+
+    + h1{
         position: absolute;
-        top: 500px;
-        left: 10%;
+        top: 570px;
+        left: 13%;
         right: 0;
         bottom: 0;
         color: #fff;
@@ -31,6 +40,12 @@ export const Overlay = styled.div`
         margin: 0;
         font-size: 3em;
         font-family: 'Noto Sans JP', sans-serif;
+        text-align: center;
+
+        & span {
+            color: #8a2824;
+        }
     }
 `
+
 export default Overlay
