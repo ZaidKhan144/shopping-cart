@@ -1,5 +1,5 @@
 import skateboardVideo from './s3.mp4'
-import { Video, Overlay, HomeHeading } from './HomeStyles'
+import Overlay from './HomeStyles'
 
 
 const Home = () => {
@@ -7,15 +7,12 @@ const Home = () => {
         
         <div>
            <Overlay>
-                <Video playsInline autoPlay muted loop> 
-                        <source src={skateboardVideo} type="video/mp4"></source>
+                <video playsInline autoPlay muted loop> 
+                    <source src={skateboardVideo} type="video/mp4"></source>
                             "Your browser does not support the video tag."
-                </Video>
-           </Overlay>
-            
-            <HomeHeading>
+                </video>
                 <h1>Glide on your own four wheels</h1>
-            </HomeHeading>
+           </Overlay>
             
         </div>
     )

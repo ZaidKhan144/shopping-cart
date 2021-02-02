@@ -1,27 +1,18 @@
-import styled, { css } from 'styled-components'
-
-// const backtrans = (props) => 
-//     props?.bct ? css({ backgroundColor: props.bct}) : undefined;
-
-// const backblack = (props) => 
-//     props?.bcb ? css({ backgroundColor: props.bcb }) : undefined;
-
-
-
+import styled from 'styled-components'
 
 export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
-    /* background-color: ${props => props.back ? "transparent" : "#323232"}; */
     background-color: #323232;
     align-items: center;
     padding-right: 10%;
     padding-left: 10%;
+    
 
     & ul {
         display: flex;
         list-style-type: none;
-        margin-top: 30px;
+        margin-top: 10px;
 
         & li {
             padding-left: 30px;
@@ -62,9 +53,9 @@ export const Nav = styled.nav`
 export const Title = styled.h3`
         
         margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 30px;
-        font-size: 2.5em;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        font-size: 2em;
         font-family: 'Londrina Solid', cursive;
         font-weight: 1000;
         letter-spacing: 2px;
