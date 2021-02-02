@@ -1,4 +1,4 @@
-import { ParentCartContainer, CartContainer, Product, Price, QTY, Remove, PlusSign, MinusSign, RemoveIcon } from './CartStyles'
+import { ParentCartContainer, CartContainer, Product, Price, QTY, Remove, PlusSign, MinusSign, RemoveIcon, PriceContainer, CartAndPrice } from './CartStyles'
 import { Link } from "react-router-dom" 
 
 const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
@@ -8,7 +8,7 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
         { shoppingCart.length > 0 ? 
             <div>
                 <h1>Your Cart Items</h1> 
-                    <div>
+                    <CartAndPrice>
                         {
                             shoppingCart.map((item) => {
                                 return (
@@ -30,21 +30,20 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
 
                                     <Remove>
                                         <RemoveIcon onClick={() => removeItem(item, "Whole")} />
-                                        {/* <button onClick={() => removeItem(item, "Whole")}>Remove</button> */}
                                     </Remove>
                                 </CartContainer>
 
                                 )
                             })
                         }
-                    <div className="PriceCart">
+                    <PriceContainer>
                         <p>Total Price: {shoppingCart.reduce((total, item) => {
                             return total + item.price * item.quantity
                         }, 0).toFixed(2)}</p>
                         <Link to="/complete">Pay</Link>
                         <Link to="/shop">Continue Shopping</Link>
-                    </div>
-                </div>
+                    </PriceContainer>
+                </CartAndPrice>
             </div>
                 
              : 

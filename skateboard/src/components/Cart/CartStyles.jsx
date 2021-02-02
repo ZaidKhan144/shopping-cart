@@ -14,30 +14,38 @@ export const ParentCartContainer = styled.div`
         & h1{
             text-align: center;
         }
-        & .PriceCart {
-            background-color: yellow;
-            width: 50%;
-            margin: 0 auto;
-            text-align: center;
-            display: flex;
-            justify-content: space-evenly;
-
-            & a {
-                text-decoration: none;
-            }
-        }
     }
+`
+
+export const CartAndPrice = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
 `
 
 export const CartContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 50%;
-    margin: 0 auto;
+    /* width: 50%;
+    margin: 0 auto; */
     border-bottom: 2px solid #b3aaaa;
     /* background-color: orange; */
     padding: 20px;
     
+`
+
+export const PriceContainer = styled.div`
+    background-color: yellow;
+    /* width: 50%;
+    margin: 0 auto; */
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+
+    & a {
+        text-decoration: none;
+    }
 `
 
 export const Product = styled.div`
