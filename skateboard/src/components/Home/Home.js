@@ -8,12 +8,13 @@ const Home = () => {
         
         <div>
            <Overlay>
-           <img src={p2} alt=""></img>
-                <video playsInline autoPlay muted loop> 
-                    <source src={skateboardVideo} type="video/mp4"></source>
-                            "Your browser does not support the video tag."
-                </video>
-                <img className="p1" src={p1} alt=""></img>
+                    <img src={p2} alt=""></img>
+                    <div></div>
+                    <video playsInline autoPlay muted loop> 
+                        <source src={skateboardVideo} type="video/mp4"></source>
+                                "Your browser does not support the video tag."
+                    </video>
+                    <img className="p1" src={p1} alt=""></img>
                 
            </Overlay>
            <h1>Glide on your own four <span>Wheels</span> </h1>

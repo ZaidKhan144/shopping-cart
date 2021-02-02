@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const Overlay = styled.div`
     position: absolute;
     width: 100%;
@@ -9,6 +8,15 @@ export const Overlay = styled.div`
     z-index: -3;
     display: grid;
     grid-template-columns: 500px 1fr 550px;
+
+    & div {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
 
     & video {
         object-fit: cover;
