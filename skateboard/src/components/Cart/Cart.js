@@ -16,6 +16,7 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                     <h1>Your Cart Items </h1>
                     <h1 className="order">Order Summary</h1>
                 </ShoppingCartHeading>
+                
                   <CartAndPrice>
                         {
                             shoppingCart.map((item) => {
@@ -41,14 +42,24 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                                         <RemoveIcon onClick={() => removeItem(item, "Whole")} />
                                     </Remove>
                                 </CartContainer>
-
+                                
                                 )
                             })
                         }
+                        
                     <PriceContainer>
-                        <p>Total Price: {shoppingCart.reduce((total, item) => {
-                            return total + item.price * item.quantity
-                        }, 0).toFixed(2)}</p>
+                    <div>
+                        <p>Total Price: </p> 
+                            
+                            <p> 
+                                ${
+                                    shoppingCart.reduce((total, item) => {
+                                        return total + item.price * item.quantity 
+                                    }, 0).toFixed(2) 
+                                }
+                            </p>
+                    </div>
+                       
                         <Link to="/complete">Pay</Link>
                         <Link to="/shop">Continue Shopping</Link>
                     </PriceContainer>
