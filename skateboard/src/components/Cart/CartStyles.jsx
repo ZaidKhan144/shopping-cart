@@ -2,70 +2,61 @@ import styled, { css } from 'styled-components'
 import { PlusCircle, MinusCircle }  from '@styled-icons/boxicons-regular'
 import { RemoveShoppingCart } from '@styled-icons/material'
 
-
-export const ParentCartContainer = styled.div`
-    position: absolute;
-    top: 15%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    
-`
-
-export const ShoppingCartHeading = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    & h1{
-        text-align: center;
-        width: 46%;
-        max-width: 888px;
-    }
-    & .order{
-        width: 38.4%;
-        max-width: 900px;
-        text-align: left;
-    }
-`
-
-export const CartAndPrice = styled.div`
+export const ParentContainer = styled.div`
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    width: 70%;
+    max-width: 1180px;
     margin: 0 auto;
-    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 50px;
+    min-height: 80vh;
+    grid-gap: 80px;
 `
 
-export const CartContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+export const DaddyCart = styled.div`
+    margin-top: 20px;
     
-    
-    /* width: 50%;
-    margin: 0 auto; */
-    border-bottom: 2px solid #b3aaaa;
-    /* background-color: orange; */
-    padding: 20px;
-    grid-auto-flow: column;
 `
 
-export const PriceContainer = styled.div`
-    /* background-color: yellow; */
-    /* width: 50%;
-    margin: 0 auto; */
-    /* text-align: center;
+export const CartItemsHeading = styled.div`
     display: flex;
-    justify-content: space-evenly; */
+   
+    & h1{
+        margin: 0;
+    }
+`
+
+export const CartStructure = styled.div`
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    margin-bottom: 80px;
+`
+
+export const CartItems = styled.div`
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    margin-top: 15px;
+    min-height: 40px;
+    grid-column: 1/5;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b3aaaa;
+`
+export const OrderSummary = styled.div`
+       
+        margin-top: 15px;
+    & h1 {
+        margin: 0;
+    }
 
     & div {
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        margin-top: 20px;
 
         & p{
             font-size: 1.4em;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 60px;
         }
     }
 
@@ -75,14 +66,14 @@ export const PriceContainer = styled.div`
         text-transform: uppercase;
         background-color: #677764;
         color: #fff;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         padding: 15px;
         text-align: center;
         border-radius: 4px;
         font-weight: bold;
     }
 
-    & a:nth-child(3){
+    & a:nth-child(4){
         background-color: #fff;
         color: #000;
         border: 2px solid #000;
@@ -99,10 +90,12 @@ export const Product = styled.div`
     }
     & p {
         margin-top: 10px;
+        font-size: 1.1em;
     }
 `
 
 export const Price = styled.div`
+    
         display: flex;
     & p {
         margin: auto;
@@ -120,6 +113,7 @@ export const PlusSign = styled(PlusCircle)``
 export const MinusSign = styled(MinusCircle)``
 
 export const QTY = styled.div`
+        
         display: flex;
     & p {
         margin: auto 0;
@@ -136,13 +130,11 @@ export const QTY = styled.div`
     }
 `
 
-
-
 export const RemoveIcon = styled(RemoveShoppingCart)``
 
 export const Remove = styled.div`
         display: flex;
-
+        
         ${RemoveIcon}{
             height: 25px;
             width: 25px;

@@ -1,56 +1,51 @@
-import { ParentCartContainer, 
-    CartContainer, 
-    Product, 
-    Price, 
-    QTY, 
-    Remove, PlusSign, MinusSign, RemoveIcon, PriceContainer, CartAndPrice, ShoppingCartHeading } from './CartStyles'
+import { ParentContainer, 
+        Product, 
+        Price, 
+        QTY, 
+        Remove, DaddyCart, CartItemsHeading, CartStructure, CartItems, OrderSummary, PlusSign, MinusSign, RemoveIcon } from './CartStyles'
 import { Link } from "react-router-dom" 
 
 const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
 
     return (
-        <ParentCartContainer> 
-        { shoppingCart.length > 0 ? 
-            <div>
-                <ShoppingCartHeading>
-                    <h1>Your Cart Items </h1>
-                    <h1 className="order">Order Summary</h1>
-                </ShoppingCartHeading>
-                
-                  <CartAndPrice>
+       <div> {
+           shoppingCart.length > 0 ? 
+           <ParentContainer>
+                <DaddyCart>
+                    <CartItemsHeading>
+                        <h1>Your Cart Items</h1>
+                    </CartItemsHeading>
+                    <CartStructure>
                         {
                             shoppingCart.map((item) => {
                                 return (
-                                    
-                                <CartContainer key={item.id}>
-                                    <Product>
-                                        <img src={item.img} alt={item.name}></img>
-                                        <p>{item.name}</p> 
-                                    </Product>
-
-                                    <QTY> 
-                                        <MinusSign onClick={() => item.quantity > 1 && removeItem(item)} />
-                                        <p>{item.quantity}</p>
-                                        <PlusSign onClick={() => addItemInCart(item)} />
-                                    </QTY>
-                                    
-                                    <Price>
-                                        <p>$ {item.price}</p>
-                                    </Price>
-
-                                    <Remove>
-                                        <RemoveIcon onClick={() => removeItem(item, "Whole")} />
-                                    </Remove>
-                                </CartContainer>
-                                
+                                    <CartItems key={item.id}>
+                                        <Product>
+                                            <img src={item.img} alt={item.name}></img>
+                                            <p>{item.name}</p>
+                                        </Product>
+                                        <QTY> 
+                                            <MinusSign onClick={() => item.quantity > 1 && removeItem(item)} />
+                                            <p>{item.quantity}</p>
+                                            <PlusSign onClick={() => addItemInCart(item)} />
+                                        </QTY>
+                                        <Price>
+                                            <p>$ {item.price}</p>
+                                        </Price>
+                                        <Remove>
+                                            <RemoveIcon onClick={() => removeItem(item, "Whole")} />
+                                        </Remove>
+                                    </CartItems>
                                 )
                             })
                         }
-                        
-                    <PriceContainer>
+                    </CartStructure>
+                </DaddyCart>
+
+                <OrderSummary>
+                    <h1>Order Summary</h1>
                     <div>
                         <p>Total Price: </p> 
-                            
                             <p> 
                                 ${
                                     shoppingCart.reduce((total, item) => {
@@ -59,21 +54,19 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                                 }
                             </p>
                     </div>
-                       
-                        <Link to="/complete">Pay</Link>
-                        <Link to="/shop">Continue Shopping</Link>
-                    </PriceContainer>
-                </CartAndPrice>
-            </div>
-                
-             : 
-            <div className="emptyCart">
+                    <Link to="/complete">Pay</Link>
+                    <Link to="/shop">Continue Shopping</Link>
+                </OrderSummary>
+            </ParentContainer>
+
+            :  <div className="emptyCart">
                 <h1>Your Cart is Empty</h1>
                 <Link to="/shop">Go Back</Link>
             </div>
-             
-        }
-        </ParentCartContainer>
+       }
+            
+       </div> 
+       
     )
 }
 
