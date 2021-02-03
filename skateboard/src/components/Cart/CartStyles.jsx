@@ -143,7 +143,26 @@ export const Remove = styled.div`
         }
 `
 
+export const EmptyCart = styled.div`
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 80px;
+        text-align: center;
 
+        & a{
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: #677764;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+            width: 30%;
+            margin: 80px auto;
+        }
+` 
 
 
 

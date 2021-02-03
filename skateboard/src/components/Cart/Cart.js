@@ -2,7 +2,7 @@ import { ParentContainer,
         Product, 
         Price, 
         QTY, 
-        Remove, DaddyCart, CartItemsHeading, CartStructure, CartItems, OrderSummary, PlusSign, MinusSign, RemoveIcon } from './CartStyles'
+        Remove, DaddyCart, CartItemsHeading, CartStructure, CartItems, OrderSummary, PlusSign, MinusSign, RemoveIcon, EmptyCart } from './CartStyles'
 import { Link } from "react-router-dom" 
 
 const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
@@ -59,10 +59,10 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                 </OrderSummary>
             </ParentContainer>
 
-            :  <div className="emptyCart">
-                <h1>Your Cart is Empty</h1>
-                <Link to="/shop">Go Back</Link>
-            </div>
+            :  <EmptyCart>
+                    <h1>There is nothing in your cart yet.</h1>
+                    <Link to="/shop">Go to shop</Link>
+                </EmptyCart>
        }
             
        </div> 
