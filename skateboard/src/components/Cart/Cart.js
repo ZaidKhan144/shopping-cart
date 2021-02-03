@@ -5,8 +5,9 @@ import { ParentContainer,
         Remove, DaddyCart, CartItemsHeading, CartStructure, CartItems, OrderSummary, PlusSign, MinusSign, RemoveIcon, EmptyCart } from './CartStyles'
 import { Link } from "react-router-dom" 
 
-const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
+const Cart = ({addItemInCart, shoppingCart, removeItem, purchase}) => {
 
+    
     return (
        <div> {
            shoppingCart.length > 0 ? 
@@ -54,7 +55,7 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
                                 }
                             </p>
                     </div>
-                    <Link to="/complete">Pay</Link>
+                    <Link to="/complete" onClick={() => purchase()} >Pay</Link>
                     <Link to="/shop">Continue Shopping</Link>
                 </OrderSummary>
             </ParentContainer>

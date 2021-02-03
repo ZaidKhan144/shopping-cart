@@ -44,6 +44,10 @@ const App = () => {
     }
     
   }
+
+  const purchase = () => {
+    setShoppingCart([])
+  }
   
   return (
     <Router>
@@ -53,7 +57,7 @@ const App = () => {
         <Route exact path="/shop"> <Shop /> </Route>
         {/* In shopItem component, extracting ID and passing it in prop through shopItemId */}
         <Route exact path="/shop/:id" render={(itemProp) => <ShopItem shopItemId={itemProp.match.params.id} addItemInCart={addItemInCart} />} />
-        <Route exact path="/cart"> <Cart addItemInCart={addItemInCart} shoppingCart={shoppingCart} removeItem={removeItem} /> </Route> 
+        <Route exact path="/cart"> <Cart addItemInCart={addItemInCart} shoppingCart={shoppingCart} removeItem={removeItem} purchase={purchase} /> </Route> 
         <Route exact path="/complete"> <Complete /> </Route>
       </Switch> 
     </Router>
