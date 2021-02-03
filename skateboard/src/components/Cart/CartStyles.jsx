@@ -10,17 +10,28 @@ export const ParentCartContainer = styled.div`
     bottom: 0;
     right: 0;
     
-    & div {
-        & h1{
-            text-align: center;
-        }
+`
+
+export const ShoppingCartHeading = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    & h1{
+        text-align: center;
+        width: 46%;
+        max-width: 888px;
+    }
+    & .order{
+        width: 38.4%;
+        max-width: 900px;
+        text-align: left;
     }
 `
 
 export const CartAndPrice = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80%;
+    grid-template-columns: 2fr 1fr;
+    width: 70%;
     margin: 0 auto;
 `
 

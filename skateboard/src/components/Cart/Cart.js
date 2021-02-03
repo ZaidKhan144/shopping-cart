@@ -1,4 +1,9 @@
-import { ParentCartContainer, CartContainer, Product, Price, QTY, Remove, PlusSign, MinusSign, RemoveIcon, PriceContainer, CartAndPrice } from './CartStyles'
+import { ParentCartContainer, 
+    CartContainer, 
+    Product, 
+    Price, 
+    QTY, 
+    Remove, PlusSign, MinusSign, RemoveIcon, PriceContainer, CartAndPrice, ShoppingCartHeading } from './CartStyles'
 import { Link } from "react-router-dom" 
 
 const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
@@ -7,11 +12,15 @@ const Cart = ({addItemInCart, shoppingCart, removeItem}) => {
         <ParentCartContainer> 
         { shoppingCart.length > 0 ? 
             <div>
-                <h1>Your Cart Items</h1> 
-                    <CartAndPrice>
+                <ShoppingCartHeading>
+                    <h1>Your Cart Items </h1>
+                    <h1 className="order">Order Summary</h1>
+                </ShoppingCartHeading>
+                  <CartAndPrice>
                         {
                             shoppingCart.map((item) => {
                                 return (
+                                    
                                 <CartContainer key={item.id}>
                                     <Product>
                                         <img src={item.img} alt={item.name}></img>
