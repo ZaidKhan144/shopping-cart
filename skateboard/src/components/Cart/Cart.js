@@ -6,8 +6,6 @@ import { ParentContainer,
 import { Link } from "react-router-dom" 
 
 const Cart = ({addItemInCart, shoppingCart, removeItem, purchase}) => {
-
-    
     return (
        <div> {
            shoppingCart.length > 0 ? 
