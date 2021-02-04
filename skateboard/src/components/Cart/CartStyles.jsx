@@ -10,11 +10,22 @@ export const ParentContainer = styled.div`
     padding-top: 50px;
     min-height: 80vh;
     grid-gap: 80px;
+
+    @media (max-width: 1024px){
+        max-width: 900px;
+        grid-template-columns: 2fr;
+    }
+
+    @media (max-width: 768px){
+        max-width: 700px;
+    }
+    @media (max-width: 630px){
+        max-width: 350px;
+    }
 `
 
 export const DaddyCart = styled.div`
     margin-top: 20px;
-    
 `
 
 export const CartItemsHeading = styled.div`
@@ -29,10 +40,17 @@ export const CartStructure = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     margin-bottom: 80px;
+
+    @media (max-width: 1024px){
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 630px){
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+    }
 `
 
 export const CartItems = styled.div`
-    
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     margin-top: 15px;
@@ -40,10 +58,25 @@ export const CartItems = styled.div`
     grid-column: 1/5;
     padding-bottom: 10px;
     border-bottom: 2px solid #b3aaaa;
+
+    @media (max-width: 630px){
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+    }
 `
 export const OrderSummary = styled.div`
        
         margin-top: 15px;
+
+        @media (max-width: 1024px){
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 630px){
+            width: 80%;
+        }
+
     & h1 {
         margin: 0;
     }
