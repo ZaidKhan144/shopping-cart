@@ -31,9 +31,8 @@ export const Overlay = styled.div`
         left: 0;
         z-index: -2;
         opacity: .95;
-        max-width: 100%;
         display: block;
-          
+        max-width: 100%;  
     }
 
     & img {

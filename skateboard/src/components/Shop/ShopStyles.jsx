@@ -27,6 +27,7 @@ export const ShopPageContainer = styled.div`
     grid-gap: 40px;
     margin-top: 50px;
     margin-bottom: 80px;
+    max-width: 1180px;
 
     @media (max-width: 630px){
         width: 90%;

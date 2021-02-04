@@ -53,6 +53,7 @@ export const ItemContainerTwo = styled.div`
 
     @media (max-width: 630px){
         padding: 0 20px;
+        
     }
 
     & h2 {
