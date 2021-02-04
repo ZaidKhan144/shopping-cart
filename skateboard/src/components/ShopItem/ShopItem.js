@@ -2,6 +2,8 @@ import { ShopItemContainer, ItemContainerOne, ItemImage, ItemContainerTwo} from 
 import data from '../../data'
 import { Link } from "react-router-dom"
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+ 
 
 const ShopItem = ({shopItemId, addItemInCart}) => {
 
@@ -25,7 +27,13 @@ const ShopItem = ({shopItemId, addItemInCart}) => {
         setShowCheckoutBtn(true)
     }
         
-     
+    const LinkMotion = motion.custom(Link) 
+
+    const CartBtnAnimation = {
+        initial: { y: -250},
+        animate: { y: -10}
+    }
+
     return(
         <div>
         
@@ -37,8 +45,8 @@ const ShopItem = ({shopItemId, addItemInCart}) => {
                 <ItemContainerTwo>
                     <h2>{item.name}</h2>
                     <p>${item.price}</p>
-                    <button onClick={handleClick}>Add to cart</button>
-                    { showCheckoutBtn ? <Link className="checkout" to="/cart">Checkout</Link> : null }
+                    <motion.button animate={CartBtnAnimation.animate} initial={CartBtnAnimation.initial} onClick={handleClick}>Add to cart</motion.button>
+                    { showCheckoutBtn ? <LinkMotion initial={{ x: '-100vw'}} animate={{ x: 0}} className="checkout" to="/cart">Checkout</LinkMotion> : null }
                     
                         <Link className="back" to="/shop">Back</Link>
                     

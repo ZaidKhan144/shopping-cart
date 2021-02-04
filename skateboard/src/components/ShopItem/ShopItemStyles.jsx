@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 
+
 export const ShopItemContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -86,6 +87,8 @@ export const ItemContainerTwo = styled.div`
     }
 
     & button {
+        ${BtnLinkSharedStyles}
+
         padding: 20px;
         border: none;
         background-color: #677764;
@@ -93,8 +96,6 @@ export const ItemContainerTwo = styled.div`
         cursor: pointer;
         margin-top: 50px;
         font-size: 1em;
-
-        ${BtnLinkSharedStyles}
 
         @media (max-width: 1024px){
             padding: 10px;
@@ -105,14 +106,15 @@ export const ItemContainerTwo = styled.div`
     }
 
     & .checkout {
+        ${BtnLinkSharedStyles}
+
         background-color: #6d3232;
         padding: 20px;
         top: 60%;
         right: 0;
         width: 50%;
         margin: 0 auto;
-
-        ${BtnLinkSharedStyles}
+        
 
         @media (max-width: 630px){
             padding: 10px;
@@ -134,4 +136,6 @@ export const ItemContainerTwo = styled.div`
         }
     } 
 `
+    
+    
 
