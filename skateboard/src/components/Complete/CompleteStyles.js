@@ -3,10 +3,12 @@ import styled from 'styled-components'
 const Payment = styled.div`
     width: 50%;
     margin: 0 auto;
-    position: absolute;
-    top: 30%;
-    left: 25%;
+    margin-top: 20%;
     text-align: center;
+
+    @media (max-width: 768px){
+        width: 80%;
+    }
 
     & h1{
         margin-bottom: 20px;
