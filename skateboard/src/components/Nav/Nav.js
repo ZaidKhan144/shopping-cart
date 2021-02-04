@@ -3,7 +3,7 @@ import { Nav, Title } from './NavStyles'
 
 const NavBar = ({cartSize}) => {
     return(
-        <Nav back>
+        <Nav>
             
             <Title>
                 <Link to="/">Skateboarders</Link>

@@ -1,5 +1,3 @@
-// import { Nav, Title } from '../Nav/NavStyles'
-// import NavBar from '../Nav/Nav'
 import { ShopPageTitle, ImgDiv, ShopPageContainer } from './ShopStyles'
 import data from '../../data'
 import { Link } from "react-router-dom"

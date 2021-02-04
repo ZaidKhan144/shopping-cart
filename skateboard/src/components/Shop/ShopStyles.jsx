@@ -1,9 +1,4 @@
 import styled from 'styled-components'
-// import  { Nav } from '../Nav/NavStyles'
-
-// export const ShopNav = styled(Nav)`
-//     background-color: #323232;
-// `;
 
 export const ShopPageTitle = styled.h1`
     text-align: center;
@@ -20,7 +15,7 @@ export const ImgDiv = styled.div`
     background-position: center;
     background-size: cover;
     margin: 0 auto;
-    
+
 `
 
 export const ShopPageContainer = styled.div`
@@ -32,6 +27,11 @@ export const ShopPageContainer = styled.div`
     grid-gap: 40px;
     margin-top: 50px;
     margin-bottom: 80px;
+
+    @media (max-width: 630px){
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
 
     & a{
         text-decoration: none;
@@ -50,7 +50,7 @@ export const ShopPageContainer = styled.div`
             width: 70%;
             margin: 0 auto;
             font-size: 1.2em;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
     }
 `

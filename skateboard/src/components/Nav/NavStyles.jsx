@@ -7,15 +7,26 @@ export const Nav = styled.nav`
     align-items: center;
     padding-right: 10%;
     padding-left: 10%;
+
+    @media (max-width: 630px){
+        flex-direction: column;
+    }
     
 
     & ul {
         display: flex;
         list-style-type: none;
         margin-top: 10px;
+        
 
         & li {
             padding-left: 30px;
+        }
+
+        @media (max-width: 630px){
+            & li:nth-child(1){
+                padding-left: 0;
+            }
         }
         
 
@@ -65,8 +76,8 @@ export const Title = styled.h3`
         
     }
 
-    @media (max-width: 630px){
-        display: none;
-    }
+     @media (max-width: 630px){
+        text-align: center;
+    } 
 
 `
