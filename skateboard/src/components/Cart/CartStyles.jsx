@@ -182,6 +182,14 @@ export const EmptyCart = styled.div`
         margin-top: 80px;
         text-align: center;
 
+        @media (max-width: 768px){
+            width: 80%;
+        }
+
+        @media (max-width: 630px){
+            width: 90%;
+        }
+
         & a{
             display: block;
             text-decoration: none;
@@ -194,6 +202,10 @@ export const EmptyCart = styled.div`
             font-weight: bold;
             width: 30%;
             margin: 80px auto;
+
+            @media (max-width: 630px){
+                width: 50%;
+            }
         }
 ` 
 
