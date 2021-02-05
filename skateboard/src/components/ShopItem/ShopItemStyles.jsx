@@ -22,6 +22,7 @@ export const ShopItemContainer = styled(motion.div)`
         grid-template-columns: 1fr;
         grid-gap: 0;
         margin-top: 40px;
+        margin-bottom: 20px;
     }
 `
 
@@ -121,7 +122,7 @@ export const ItemContainerTwo = styled.div`
 
         @media (max-width: 630px){
             padding: 10px;
-            top: 120px;
+            top: 100px;
         }
     }
 
