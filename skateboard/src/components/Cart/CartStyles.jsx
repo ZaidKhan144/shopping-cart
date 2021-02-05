@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { PlusCircle, MinusCircle }  from '@styled-icons/boxicons-regular'
 import { RemoveShoppingCart } from '@styled-icons/material'
+import { motion } from 'framer-motion'
 
 export const ParentContainer = styled.div`
     display: grid;
@@ -176,7 +177,7 @@ export const Remove = styled.div`
         }
 `
 
-export const EmptyCart = styled.div`
+export const EmptyCart = styled(motion.div)`
         width: 50%;
         margin: 0 auto;
         margin-top: 80px;

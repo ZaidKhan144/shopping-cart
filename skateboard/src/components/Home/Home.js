@@ -6,10 +6,19 @@ import p2 from './p2.jpeg'
 
 const Home = () => {
 
-    const HomeTitle = {
-        initial: {opacity: 0},
-        animate: {opacity: 1},
-        transition: {delay: 1, duration: 1}
+    // To make things clean I made variant for home title, you can name the property with anything you want. 
+    // To make it work, Just call them on the element. 
+    const HomeTitleVariants = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                delay: 1,
+                duration: 1
+            }
+        }
     }
 
     return(
@@ -26,9 +35,10 @@ const Home = () => {
                 
            </Overlay>
            <motion.h1 
-                initial={HomeTitle.initial} 
-                animate={HomeTitle.animate} 
-                transition={HomeTitle.transition}
+            // This is how we access the variants.
+                variants={HomeTitleVariants}
+                initial="hidden" 
+                animate="visible"
             >
                 Glide on your own four <span>Wheels</span></motion.h1>
         </div>

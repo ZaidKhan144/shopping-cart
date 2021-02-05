@@ -4,10 +4,15 @@ import { ParentContainer,
         QTY, 
         Remove, DaddyCart, CartItemsHeading, CartStructure, CartItems, OrderSummary, PlusSign, MinusSign, RemoveIcon, EmptyCart } from './CartStyles'
 import { Link } from "react-router-dom" 
+import { motion } from 'framer-motion'
 
 const Cart = ({addItemInCart, shoppingCart, removeItem, purchase}) => {
     return (
-       <div> {
+       <motion.div
+            initial={{ x: '100vw'}}
+            animate={{x: 0}}
+            transition={{type: 'spring', delay: 0.1, stiffness: 60}}
+       > {
            shoppingCart.length > 0 ? 
            <ParentContainer>
                 <DaddyCart>
@@ -58,13 +63,17 @@ const Cart = ({addItemInCart, shoppingCart, removeItem, purchase}) => {
                 </OrderSummary>
             </ParentContainer>
 
-            :  <EmptyCart>
+            :  <EmptyCart
+                initial={{ x: '100vw'}}
+                animate={{x: 0}}
+                transition={{type: 'spring', delay: 0.1, stiffness: 60}}
+            >
                     <h1>There is nothing in your cart yet.</h1>
                     <Link to="/shop">Go to shop</Link>
                 </EmptyCart>
        }
             
-       </div> 
+       </motion.div> 
        
     )
 }

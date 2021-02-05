@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const Payment = styled.div`
+const Payment = styled(motion.div)`
     width: 50%;
     margin: 0 auto;
     margin-top: 20%;
