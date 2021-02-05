@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.7d915a2c.chunk.css",
-    "main.js": "/shopping-cart/static/js/main.6e091bf0.chunk.js",
-    "main.js.map": "/shopping-cart/static/js/main.6e091bf0.chunk.js.map",
+    "main.js": "/shopping-cart/static/js/main.3bc5bc3d.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.3bc5bc3d.chunk.js.map",
     "runtime-main.js": "/shopping-cart/static/js/runtime-main.adadf373.js",
     "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.adadf373.js.map",
-    "static/js/2.6026054c.chunk.js": "/shopping-cart/static/js/2.6026054c.chunk.js",
-    "static/js/2.6026054c.chunk.js.map": "/shopping-cart/static/js/2.6026054c.chunk.js.map",
+    "static/js/2.6a6ba758.chunk.js": "/shopping-cart/static/js/2.6a6ba758.chunk.js",
+    "static/js/2.6a6ba758.chunk.js.map": "/shopping-cart/static/js/2.6a6ba758.chunk.js.map",
     "index.html": "/shopping-cart/index.html",
     "static/css/main.7d915a2c.chunk.css.map": "/shopping-cart/static/css/main.7d915a2c.chunk.css.map",
-    "static/js/2.6026054c.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.6026054c.chunk.js.LICENSE.txt",
+    "static/js/2.6a6ba758.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.6a6ba758.chunk.js.LICENSE.txt",
     "static/media/p1.5aa08f36.jpg": "/shopping-cart/static/media/p1.5aa08f36.jpg",
     "static/media/p2.0d34a032.jpeg": "/shopping-cart/static/media/p2.0d34a032.jpeg",
     "static/media/picture1.8a0a2f6d.jpg": "/shopping-cart/static/media/picture1.8a0a2f6d.jpg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.adadf373.js",
-    "static/js/2.6026054c.chunk.js",
+    "static/js/2.6a6ba758.chunk.js",
     "static/css/main.7d915a2c.chunk.css",
-    "static/js/main.6e091bf0.chunk.js"
+    "static/js/main.3bc5bc3d.chunk.js"
   ]
 }
