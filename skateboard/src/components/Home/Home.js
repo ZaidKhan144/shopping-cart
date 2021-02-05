@@ -1,9 +1,17 @@
 import skateboardVideo from './s3.mp4'
 import Overlay from './HomeStyles'
+import { motion } from 'framer-motion'
 import p1 from './p1.jpg'
 import p2 from './p2.jpeg'
 
 const Home = () => {
+
+    const HomeTitle = {
+        initial: {opacity: 0},
+        animate: {opacity: 1},
+        transition: {delay: 1, duration: 1}
+    }
+
     return(
         
         <div>
@@ -14,10 +22,15 @@ const Home = () => {
                         <source src={skateboardVideo} type="video/mp4"></source>
                                 "Your browser does not support the video tag."
                     </video>
-                    <img className="p1" src={p1} alt=""></img>
+                    <img src={p1} alt=""></img>
                 
            </Overlay>
-           <h1>Glide on your own four <span>Wheels</span> </h1>
+           <motion.h1 
+                initial={HomeTitle.initial} 
+                animate={HomeTitle.animate} 
+                transition={HomeTitle.transition}
+            >
+                Glide on your own four <span>Wheels</span></motion.h1>
         </div>
     )
 }

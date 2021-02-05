@@ -30,14 +30,18 @@ const ShopItem = ({shopItemId, addItemInCart}) => {
     const LinkMotion = motion.custom(Link) 
 
     const CartBtnAnimation = {
-        initial: { y: -250},
-        animate: { y: -10}
+        initial: { y: -100},
+        animate: { y: -10},
     }
 
     return(
         <div>
         
-            <ShopItemContainer>
+            <ShopItemContainer 
+                initial={{ x: '100vw'}}
+                animate={{x: 0}}
+                transition={{type: 'spring', delay: 0.1, stiffness: 60}}
+            >
                 <ItemContainerOne>
                     <ItemImage src={item.img} />
                 </ItemContainerOne>
@@ -45,11 +49,18 @@ const ShopItem = ({shopItemId, addItemInCart}) => {
                 <ItemContainerTwo>
                     <h2>{item.name}</h2>
                     <p>${item.price}</p>
-                    <motion.button animate={CartBtnAnimation.animate} initial={CartBtnAnimation.initial} onClick={handleClick}>Add to cart</motion.button>
-                    { showCheckoutBtn ? <LinkMotion initial={{ x: '-100vw'}} animate={{ x: 0}} className="checkout" to="/cart">Checkout</LinkMotion> : null }
+                    <motion.button 
+                        animate={CartBtnAnimation.animate} 
+                        initial={CartBtnAnimation.initial} 
+                        onClick={handleClick}>Add to cart</motion.button>
+                    { showCheckoutBtn ? <LinkMotion 
+                                            initial={{ x: '90vw'}}
+                                            animate={{ x: 0}} 
+                                            transition= {{type: 'spring', stiffness: 60}}
+                                            className="checkout" 
+                                            to="/cart">Checkout</LinkMotion> : null }
                     
                         <Link className="back" to="/shop">Back</Link>
-                    
                     
                 </ItemContainerTwo>
             </ShopItemContainer>

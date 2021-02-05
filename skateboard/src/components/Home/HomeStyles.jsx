@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Overlay = styled.div`
+export const Overlay = styled(motion.div)`
     position: absolute;
     width: 100%;
     height: 100%;
@@ -8,6 +9,7 @@ export const Overlay = styled.div`
     z-index: -3;
     display: grid;
     grid-template-columns: 500px 1fr 550px;
+
 
     @media (max-width: 1024px){
         grid-template-columns: 1fr;  

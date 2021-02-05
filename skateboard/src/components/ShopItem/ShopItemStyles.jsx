@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
+import { motion } from 'framer-motion'
 
-
-export const ShopItemContainer = styled.div`
+export const ShopItemContainer = styled(motion.div)`
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 50%;
