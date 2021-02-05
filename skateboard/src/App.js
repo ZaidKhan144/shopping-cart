@@ -50,7 +50,7 @@ const App = () => {
   }
   
   return (
-    <Router>
+    <Router basename="/shopping-cart">
       <NavBar cartSize={shoppingCart.length} />
       <Switch>
         <Route exact path="/"> <Home /> </Route>
