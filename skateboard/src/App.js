@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/Home/Home'
 import NavBar from './components/Nav/Nav'
 import Shop from './components/Shop/Shop'
@@ -50,7 +50,7 @@ const App = () => {
   }
   
   return (
-    <BrowserRouter basename="/shopping-cart">
+    <HashRouter basename="/">
       <NavBar cartSize={shoppingCart.length} />
       <Switch>
         <Route exact path="/"> <Home /> </Route>
@@ -60,7 +60,7 @@ const App = () => {
         <Route exact path="/cart"> <Cart addItemInCart={addItemInCart} shoppingCart={shoppingCart} removeItem={removeItem} purchase={purchase} /> </Route> 
         <Route exact path="/complete"> <Complete /> </Route>
       </Switch> 
-    </BrowserRouter>
+    </HashRouter>
     
   );
 }

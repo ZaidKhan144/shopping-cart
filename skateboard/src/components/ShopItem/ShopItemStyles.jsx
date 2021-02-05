@@ -54,7 +54,7 @@ export const ItemContainerTwo = styled.div`
 
     @media (max-width: 630px){
         padding: 0 20px;
-        
+        padding-bottom: 10px;
     }
 
     & h2 {
@@ -69,7 +69,7 @@ export const ItemContainerTwo = styled.div`
         }
 
         @media (max-width: 630px){
-            font-size: 1.5em;
+            font-size: 1.1em;
         }
     }
 
@@ -81,8 +81,9 @@ export const ItemContainerTwo = styled.div`
         width: 25%;
 
         @media (max-width: 630px){
-            margin-top: 10px;
-            font-size: 1.3em;
+            margin-top: 20px;
+            font-size: 1em;
+            border-bottom: none;
         }
     }
 
@@ -101,7 +102,9 @@ export const ItemContainerTwo = styled.div`
             padding: 10px;
         }
         @media (max-width: 630px){
-            top: 70%;
+            top: 10%;
+            font-size: 0.7em;
+            left: 70%;
         }
     }
 
@@ -118,7 +121,7 @@ export const ItemContainerTwo = styled.div`
 
         @media (max-width: 630px){
             padding: 10px;
-            top: 170px;
+            top: 120px;
         }
     }
 
