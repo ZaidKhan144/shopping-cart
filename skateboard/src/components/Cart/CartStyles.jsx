@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { PlusCircle, MinusCircle }  from '@styled-icons/boxicons-regular'
-import { RemoveShoppingCart } from '@styled-icons/material'
+// import { RemoveShoppingCart } from '@styled-icons/material'
+import { Cross } from '@styled-icons/entypo'
 import { motion } from 'framer-motion'
 
 export const ParentContainer = styled.div`
@@ -164,14 +165,14 @@ export const QTY = styled.div`
     }
 `
 
-export const RemoveIcon = styled(RemoveShoppingCart)``
+export const RemoveIcon = styled(Cross)``
 
 export const Remove = styled.div`
         display: flex;
         
         ${RemoveIcon}{
-            height: 25px;
-            width: 25px;
+            height: 30px;
+            width: 30px;
             cursor: pointer;
             margin: auto;
         }
