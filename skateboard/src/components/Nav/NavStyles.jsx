@@ -12,7 +12,6 @@ export const Nav = styled.nav`
         flex-direction: column;
     }
     
-
     & ul {
         display: flex;
         list-style-type: none;
@@ -68,8 +67,7 @@ export const Title = styled.h3`
         padding-top: 10px;
         font-size: 2em;
         font-family: 'Londrina Solid', cursive;
-        font-weight: 1000;
-        letter-spacing: 2px;
+
     a {
         color: #fff;
         text-decoration: none;

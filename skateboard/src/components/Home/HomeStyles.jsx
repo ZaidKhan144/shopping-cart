@@ -50,14 +50,15 @@ export const Overlay = styled(motion.div)`
     + h1{
         position: absolute;
         top: 570px;
-        left: 13%;
+        left: 15%;
         right: 0;
         bottom: 0;
         color: #fff;
         margin: 0;
-        font-size: 3em;
-        font-family: 'Noto Sans JP', sans-serif;
         text-align: center;
+        font-family: 'Skateboard font';
+        font-size: 3em;
+        letter-spacing: 3px;
 
         @media (max-width: 1024px){
             left: 0;

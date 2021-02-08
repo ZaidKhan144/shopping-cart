@@ -6,6 +6,7 @@ const Payment = styled(motion.div)`
     margin: 0 auto;
     margin-top: 20%;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 
     @media (max-width: 768px){
         width: 80%;

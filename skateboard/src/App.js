@@ -5,6 +5,7 @@ import Shop from './components/Shop/Shop'
 import ShopItem from './components/ShopItem/ShopItem'
 import Cart from './components/Cart/Cart'
 import Complete from './components/Complete/Complete'
+import './fonts/fonts.css'
 import { useState } from 'react'
 
 const App = () => {

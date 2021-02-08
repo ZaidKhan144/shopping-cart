@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { PlusCircle, MinusCircle }  from '@styled-icons/boxicons-regular'
-// import { RemoveShoppingCart } from '@styled-icons/material'
 import { Cross } from '@styled-icons/entypo'
 import { motion } from 'framer-motion'
 
@@ -35,6 +34,9 @@ export const CartItemsHeading = styled.div`
    
     & h1{
         margin: 0;
+        font-family: Skateboard font;
+        letter-spacing: 2px;
+
     }
 `
 
@@ -42,6 +44,7 @@ export const CartStructure = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     margin-bottom: 80px;
+    font-family: 'Roboto', sans-serif;
 
     @media (max-width: 1024px){
         margin-bottom: 10px;
@@ -66,7 +69,7 @@ export const CartItems = styled.div`
     }
 `
 export const OrderSummary = styled.div`
-       
+        font-family: 'Roboto', sans-serif;
         margin-top: 15px;
 
         @media (max-width: 1024px){
@@ -81,6 +84,8 @@ export const OrderSummary = styled.div`
 
     & h1 {
         margin: 0;
+        font-family: Skateboard font;
+        letter-spacing: 2px;
     }
 
     & div {
@@ -126,6 +131,7 @@ export const Product = styled.div`
     & p {
         margin-top: 10px;
         font-size: 1.1em;
+        
     }
 `
 
@@ -183,6 +189,7 @@ export const EmptyCart = styled(motion.div)`
         margin: 0 auto;
         margin-top: 80px;
         text-align: center;
+        font-family: 'Roboto', sans-serif;
 
         @media (max-width: 768px){
             width: 80%;

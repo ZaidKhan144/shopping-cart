@@ -4,9 +4,10 @@ export const ShopPageTitle = styled.h1`
     text-align: center;
     margin: 0;
     padding-top: 30px; 
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.7em;
+    font-family: 'Skateboard font';
+    font-size: 2em;
     color: #000;
+    letter-spacing: 2px;
 `
 
 export const ImgDiv = styled.div`
@@ -45,13 +46,14 @@ export const ShopPageContainer = styled.div`
             width: 70%;
             margin: 5px auto;
             font-size: 1.2em;
+            font-family: 'Roboto', sans-serif;
         }
 
         & p {
             width: 70%;
             margin: 0 auto;
             font-size: 1.2em;
-            /* font-weight: bold; */
+            font-family: 'Roboto', sans-serif;
         }
     }
 `

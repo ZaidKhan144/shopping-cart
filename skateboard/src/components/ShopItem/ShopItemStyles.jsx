@@ -48,6 +48,7 @@ const BtnLinkSharedStyles = css`
     text-align: center;
     font-weight: bold;
     left: 0;
+    font-family: 'Roboto', sans-serif;
 `
 
 export const ItemContainerTwo = styled.div`
