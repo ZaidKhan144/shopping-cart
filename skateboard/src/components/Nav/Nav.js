@@ -9,7 +9,7 @@ const NavBar = ({cartSize}) => {
                 <Link to="/">Skateboarders</Link>
             </Title>
 
-            <a href="https://github.com/ZaidKhan144" target="_blank" rel="noreferrer"><GitLogo></GitLogo></a>
+            <a href="https://github.com/ZaidKhan144/shopping-cart" target="_blank" rel="noreferrer"><GitLogo></GitLogo></a>
 
             <ul>
                 <li>
