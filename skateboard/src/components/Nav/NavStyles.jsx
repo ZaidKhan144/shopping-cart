@@ -1,17 +1,43 @@
 import styled from 'styled-components'
+import { Github } from "@styled-icons/feather";
+
+export const GitLogo = styled(Github)`
+            width: 25px;
+            height: 25px;
+            transition: all .5s ease;
+            color: #fff;
+            fill: transparent;
+
+            &:hover{
+                fill: #fff;
+                transform: translateY(5px);
+            }
+            @media (max-width: 768px){
+                width: 20px;
+                height: 20px;
+            }
+    `
 
 export const Nav = styled.nav`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #323232;
     align-items: center;
-    padding-right: 10%;
-    padding-left: 10%;
 
     @media (max-width: 630px){
         flex-direction: column;
+        padding-bottom: 10px;
     }
-    
+
+    & a:nth-child(2){
+        @media (max-width: 768px){
+            margin-left: 30px;
+        }
+        @media (max-width: 630px){
+            margin-left: 0;
+        }
+    }
+        
     & ul {
         display: flex;
         list-style-type: none;

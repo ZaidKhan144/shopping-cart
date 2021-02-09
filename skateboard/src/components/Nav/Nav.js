@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Nav, Title } from './NavStyles' 
+import { Nav, Title, GitLogo } from './NavStyles' 
 
 const NavBar = ({cartSize}) => {
     return(
@@ -8,7 +8,9 @@ const NavBar = ({cartSize}) => {
             <Title>
                 <Link to="/">Skateboarders</Link>
             </Title>
-                
+
+            <a href="https://github.com/ZaidKhan144" target="_blank" rel="noreferrer"><GitLogo></GitLogo></a>
+
             <ul>
                 <li>
                     <Link to="/">Home</Link>
