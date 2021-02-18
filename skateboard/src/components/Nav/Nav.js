@@ -6,7 +6,7 @@ const NavBar = ({cartSize}) => {
         <Nav>
             
             <Title>
-                <Link to="/">Skateboarders</Link>
+                <Link to="/">Uptown Skate Shop</Link>
             </Title>
 
             <a href="https://github.com/ZaidKhan144/shopping-cart" target="_blank" rel="noreferrer"><GitLogo></GitLogo></a>

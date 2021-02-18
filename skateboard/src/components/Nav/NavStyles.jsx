@@ -17,7 +17,7 @@ export const GitLogo = styled(Github)`
                 height: 20px;
             }
     `
-
+ 
 export const Nav = styled.nav`
     display: flex;
     justify-content: space-around;
