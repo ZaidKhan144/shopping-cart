@@ -92,7 +92,7 @@ export const Title = styled.h3`
         margin-bottom: 10px;
         padding-top: 10px;
         font-size: 2em;
-        font-family: 'Londrina Solid', cursive;
+        font-family: 'Roboto', sans-serif;
 
     a {
         color: #fff;
