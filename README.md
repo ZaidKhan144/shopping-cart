@@ -10,7 +10,7 @@ An E-commerce skateboard website with all the shopping cart functionalities.
 
 ![image](https://i.postimg.cc/WzFmRQHd/Uptown-Skate-Shop.png)
 
-## Shop Items page
+## Shop Item page
 
 ![image](https://i.postimg.cc/bYttg1Dg/Uptown-Skate-Shop-1.png)
 
