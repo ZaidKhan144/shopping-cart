@@ -43,9 +43,10 @@ $ npm start
 - React
 - Styled Components
 - Framer Motion
+- Styled Icons
 - ESLint - A linter tool to standardize code
 - Prettier - Code formatter
-- Deployment on GitHub
+- GitHub Pages
 
 
 
