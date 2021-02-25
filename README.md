@@ -66,6 +66,6 @@ In the future, I might add more product options and create a filter to search fo
 
 You can visit the App here: https://zaidkhan144.github.io/shopping-cart/#/
 
-Funny story, Remember when I mentioned wrapping cart items by a parent div? So I was struggling to come up with its name to use it as a component, and I had to make sure I don't forget it as well, so I named it DaddyCart 😂
+Funny story, Remember when I mentioned wrapping cart items by a parent div? So I was struggling to come up with its name to use it as a component, and I had to make sure I don't forget it as well, so I named it `DaddyCart` 😂
 
 ![image](https://i.postimg.cc/W34gvCfG/Etfm-Yr-WYAMStf.png)
