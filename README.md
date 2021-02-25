@@ -60,7 +60,7 @@ Another challenge I came across was designing the Cart Item page. Initially, I m
 
 The last challenge I faced was to hide browser video controls. On inspecting on video, we get to see two options Loop and Show Controls. So to hide those options, I made a mask at the top and positioned it relative to the video. Now, if you inspect a video, you won't see those options. 
 
-At the end of the day, the technologies implemented in this project are React, React-Router, styled-components, and framer-motion library. I chose styled-components because of its ability to make reusable components to handle CSS and framer-motion because of its declarative syntax. I have also made this responsive to give an optimized browsing experience. 
+At the end of the day, the technologies implemented in this project are `React`, `React-Router`, `styled-components`, and `framer-motion library`. I chose styled-components because of its ability to make reusable components to handle CSS and framer-motion because of its declarative syntax. I have also made this responsive to give an optimized browsing experience. 
 
 In the future, I might add more product options and create a filter to search for desired results.
 
