@@ -38,3 +38,15 @@ $ npm install
 # Start the project
 $ npm start
 ```
+
+## Tech used
+- React
+- Styled Components
+- Framer Motion
+- ESLint - A linter tool to standardize code
+- Prettier - Code formatter
+- Deployment on GitHub
+
+
+
+
