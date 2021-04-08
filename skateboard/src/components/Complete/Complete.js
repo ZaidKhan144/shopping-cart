@@ -1,4 +1,5 @@
 import Payment from './CompleteStyles'
+import { Link } from "react-router-dom" 
 
 const Complete = () => {
     return (
@@ -9,6 +10,7 @@ const Complete = () => {
         >
             <h1>Thank You for your Payment!</h1>
             <h3>We will process the order shortly.</h3>
+            <Link to="/"> Back To Home </Link> 
         </Payment>
     )   
 }

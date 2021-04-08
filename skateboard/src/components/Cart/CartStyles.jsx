@@ -184,6 +184,24 @@ export const Remove = styled.div`
         }
 `
 
+export const BackToBtnSharedStyle = css`
+
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: #677764;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        border-radius: 4px;
+        font-weight: bold;
+        width: 30%;
+
+        @media (max-width: 630px){
+            width: 50%;
+        }
+`
+
 export const EmptyCart = styled(motion.div)`
         width: 50%;
         margin: 0 auto;
@@ -200,21 +218,8 @@ export const EmptyCart = styled(motion.div)`
         }
 
         & a{
-            display: block;
-            text-decoration: none;
-            text-transform: uppercase;
-            background-color: #677764;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            border-radius: 4px;
-            font-weight: bold;
-            width: 30%;
-            margin: 80px auto;
-
-            @media (max-width: 630px){
-                width: 50%;
-            }
+            ${BackToBtnSharedStyle}
+            margin: 80px auto; 
         }
 ` 
 
